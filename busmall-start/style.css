@@ -1,0 +1,52 @@
+html, body {
+    background: url(http://big.assets.huffingtonpost.com/gJtb1Qg.gif) fixed center no-repeat;
+    font-family: Arial;
+    font-size: 22pt;
+    text-shadow: 5px 5px 8px rgb(1, 39, 17);
+     outline: 5px rgb(207, 176, 214);
+    color: rgb(255, 247, 177);
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+
+  h1 {
+    padding:5%;
+    background :  rgb(4, 4, 107);
+  }
+
+  p {
+    font-size:18pt;
+    background :  rgb(4, 4, 107);
+
+  }
+
+  
+  #image_container {
+
+    padding:10%;
+
+    text-align:center;
+   
+    height:400px;
+   
+}
+img {
+    height:50%;
+    width:200px;
+    text-align:left;
+    
+}
+#center {
+    margin:auto;
+   
+}
+#left {
+    margin:auto auto auto 0;
+   
+}
+#right {
+    margin:auto 0 auto auto;
+  
+}

@@ -15,8 +15,9 @@
       <img id="center" src="">
       <img id="right" src="">
   </section>
+  
   <ul id="tally"></ul>
-  <canvas id="chart" height="500px" width="1000px"></canvas>
+  <!-- <canvas id="chart" height="500px" width="1000px"></canvas> -->
       <script src="busmall.js"></script>
   </body>
 </html>

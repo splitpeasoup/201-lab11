@@ -50,3 +50,7 @@ img {
     margin:auto 0 auto auto;
   
 }
+canvas {
+
+    background : white;
+}

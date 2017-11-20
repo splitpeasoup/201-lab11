@@ -1,16 +1,13 @@
 'use strict';
-
-
 Product.names = ['bag', 'banana', 'bathroom', 'boots', 'breakfast', 'bubblegum', 'chair', 'cthulhu', 'dog-duck', 'dragon', 'pen', 'pet-sweep', 'scissors', 'shark', 'sweep', 'tauntaun', 'unicorn', 'usb', 'water-can',
 'wine-glass'];
-
 Product.all = [];
 Product.container = document.getElementById('image_container');
 Product.justViewed = [];
 Product.pics = [document.getElementById('left'), document.getElementById('center'), document.getElementById('right')];
 Product.tally = document.getElementById('tally');
 Product.totalClicks = 0;
-
+var votes = [];
 function Product(name) {
   this.name = name;
   this.path = 'img/' + name + '.jpg';
@@ -21,11 +18,9 @@ function Product(name) {
 for(var i = 0; i < Product.names.length; i++) {
   new Product(Product.names[i]);
 }
-
 function makeRandom() {
   return Math.floor(Math.random() * Product.names.length);
 }
-
 function displayPics() {
   var currentlyShowing = [];
   currentlyShowing[0] = makeRandom();
@@ -53,7 +48,6 @@ function displayPics() {
     Product.justViewed[i] = currentlyShowing[i];
   }
 }
-//handle click events
 
 function handleClick(event) {
   console.log(Product.totalClicks, 'total clicks');
@@ -80,9 +74,12 @@ function showTally() {
     liEl.textContent = Product.all[i].name + ' has ' + Product.all[i].votes + ' votes in ' + Product.all[i].views + ' views';
     Product.tally.appendChild(liEl);
   }
+  createChart();
 }
 //event listener
 Product.container.addEventListener('click', handleClick);
 displayPics();
+
+localStorage.setItem('userResults',JSON.stringify(Product.all));
 
 
